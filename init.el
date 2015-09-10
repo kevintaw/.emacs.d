@@ -112,8 +112,12 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 ;; need statistics of keyfreq asap
 (require 'init-keyfreq)
 (require 'init-httpd)
-
-
+;; (require 'idle-highlight-mode)
+;; (autoload 'idle-highlight-mode "idle-highlight" "highlight the word the point is on" t)
+;; (add-hook 'prog-mode-hook 'idle-highlight-mode)
+(require 'highlight-symbol)
+(global-set-key (kbd "M-s j") 'highlight-symbol-at-point) 
+(global-set-key (kbd "<double-mouse-1>") 'highlight-symbol-at-point)
 (require 'sr-speedbar)
 ;; (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 (setq speedbar-show-unknown-files t)  
