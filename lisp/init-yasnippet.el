@@ -2,6 +2,12 @@
 ;; but it's necessary cost
 (require 'yasnippet)
 
+
+;; 使用Ctrl-c k作为唯一的触发快捷键
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
+
 ;; my private snippets, should be placed before enabling yasnippet
 (setq my-yasnippets (expand-file-name "~/my-yasnippets"))
 (if (and  (file-exists-p my-yasnippets) (not (member my-yasnippets yas-snippet-dirs)))
