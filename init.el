@@ -129,6 +129,10 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
                                (interactive)  
                                (sr-speedbar-toggle))) 
 
+(require 'pythonic)
+(require 'pyenv-mode)
+(require 'init-anaconda-mode)
+
 ;; projectile costs 7% startup time
 
 ;; misc has some crucial tools I need immediately
